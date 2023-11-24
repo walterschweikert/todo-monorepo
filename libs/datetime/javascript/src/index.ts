@@ -1,1 +1,1 @@
-export {datetime} from './lib/datetime'
+export {JsDatetimeProvider} from './lib/JsDatetimeProvider'

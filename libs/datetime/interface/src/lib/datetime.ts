@@ -1,3 +1,7 @@
-import {datetime as momentDatetime} from "@todo-monorepo/datetime/javascript"
+import {DateTimeService} from "./datetype-types";
+import {useDatetimeContext} from "./datetime-context";
 
-export const datetime = momentDatetime
+export const useDatetime = (): DateTimeService => {
+  const {datetime: datetimeImp} = useDatetimeContext()
+  return datetimeImp()
+}

@@ -1,1 +1,1 @@
-export {datetime} from './lib/datetime'
+export {MomentDatetimeProvider} from './lib/MomentDatetimeProvider'
