@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@todo-monorepo/datetime/interface": [
+        "libs/datetime/interface/src/index.ts"
+      ],
+      "@todo-monorepo/datetime/javascript": [
+        "libs/datetime/javascript/src/index.ts"
+      ],
+      "@todo-monorepo/datetime/moment": ["libs/datetime/moment/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
