@@ -1,0 +1,33 @@
+{
+  "name": "todo-monorepo-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/todo-monorepo-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/todo-monorepo-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "todo-monorepo:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "todo-monorepo:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "todo-monorepo:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/todo-monorepo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "implicitDependencies": ["todo-monorepo"],
+  "tags": []
+}
