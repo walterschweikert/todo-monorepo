@@ -1,16 +1,14 @@
-import styled from '@emotion/styled';
-
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import {TodoList} from "./TodoList";
+import {JsDatetimeProvider} from "@todo-monorepo/datetime/javascript";
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="todo-monorepo" />
-    </StyledApp>
+    <div>
+      <JsDatetimeProvider>
+        <TodoList  />
+      </JsDatetimeProvider>
+    </div>
+
   );
 }
 
